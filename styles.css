@@ -1,0 +1,20 @@
+
+
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+.diningDetails label, .diningDetails .widgetInput {
+   display: flex;
+}
+
+.subTitle {
+   font-style: italic;
+}
+
+#shareTable, #shareTable tr , #shareTable th , #shareTable td {
+   border: 1px solid black;
+   text-align: center;
+}
+

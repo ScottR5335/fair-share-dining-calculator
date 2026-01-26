@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" href="images/greenDollarFavicon-32x32.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FairShare Dining Calculator</title>
+</head>
+
+<body>
+    <h1>FairShare Dining Calculator</h1>
+    <h2 class="subTitle">Tip your server and split the check fairly &mdash; no matter how your group divides the check!</h2>
+    <form>
+        <fieldset class="diningDetails">
+            <legend>Enter the details of your dining event here...</legend>
+
+            <div class="formWidget">
+                <label for="cost">Enter the cost of the meal:</label>
+                <div class="widgetInput">
+                    $&nbsp;<input type="text" name="cost" id="cost">
+                </div>
+            </div>
+            <br>
+            <div class="formWidget">
+                <label for="tipPercentage">See if the establishment already added a tip to your bill.  Then enter (or select) any additional tip percentage:</label>
+                <div class="widgetInput">
+                    <input id="tipPercentage" list="tipSuggestions" name="tipPercentage">&nbsp;%
+                    <datalist id="tipSuggestions">
+                        <option value="0"></option>
+                        <option value="5"></option>
+                        <option value="10"></option>
+                        <option value="15"></option>
+                        <option value="20"></option>
+                        <option value="25"></option>
+                        <option value="30"></option>
+                    </datalist>
+                </div>
+            </div>
+            <br>
+            <div class="formWidget">
+                <label for="numInParty">Enter the number of patrons in your party (including yourself):</label>
+                <div class="widgetInput">
+                    <input id="numInParty" type="text" name="numInParty">&nbsp;people
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <br>
+    <fieldset>
+        <legend>Here is the amount due...</legend>
+        <div id="totalAmountSentence">The total amount due is $<span id="totalAmountDue"></span>.</div>
+        <br>
+        <table id="shareTable">
+            <!--The share table will display here.-->
+        </table>
+    </fieldset>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
