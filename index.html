@@ -12,10 +12,10 @@
 
 <body>
     <h1>FairShare Dining Calculator</h1>
-    <h2 class="subTitle">Tip your server and split the check fairly &mdash; no matter how your group divides the check!</h2>
+    <h2 class="subTitle">Tip your server and split the check fairly &mdash;<br>no matter how your group divides the check!</h2>
     <form>
         <fieldset class="diningDetails">
-            <legend>Enter the details of your dining event here...</legend>
+            <legend>Enter the details of your dining event here.</legend>
 
             <div class="formWidget">
                 <label for="cost">Enter the cost of the meal:</label>
@@ -25,7 +25,7 @@
             </div>
             <br>
             <div class="formWidget">
-                <label for="tipPercentage">See if the establishment already added a tip to your bill.  Then enter (or select) any additional tip percentage:</label>
+                <label for="tipPercentage">See if the establishment already added a tip to your bill.<br>Then select any additional tip percentage or enter a custom percentage:</label>
                 <div class="widgetInput">
                     <input id="tipPercentage" list="tipSuggestions" name="tipPercentage">&nbsp;%
                     <datalist id="tipSuggestions">
@@ -50,7 +50,16 @@
     </form>
     <br>
     <fieldset>
-        <legend>Here is the amount due...</legend>
+        <div class="updateDetails formWidget">
+            Click the calculator to update<br>the table's calculations.<br>
+            <button type="button" id="updateBtn">
+                <img src="images/12percentcalculator-5149748_640.png" alt="calculator">
+            </button>
+        </div>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Here is what the patrons owe.</legend>
         <div id="totalAmountSentence">The total amount due is $<span id="totalAmountDue"></span>.</div>
         <br>
         <table id="shareTable">
