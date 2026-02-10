@@ -22,6 +22,16 @@ let myDefaultTableContent =
         </th>
     </tr>`
 
+document.addEventListener("DOMContentLoaded", () => {
+  new QRCode(document.getElementById("qrcode"), {
+    text: window.location.href,
+    width: 128,
+    height: 128
+  });
+});
+
+
+
 document.addEventListener('change', function() {
     mealCost = Number(document.getElementById("cost").value);
     numPatrons = Number(document.getElementById("numInParty").value);

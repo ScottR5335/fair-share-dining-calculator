@@ -51,6 +51,8 @@
     <br>
     <fieldset>
         <div class="updateDetails formWidget">
+            <!--This button doesn't really do anything.  The info automatically updates as soon as the user makes any change.-->
+            <!--The button is here only because the user needs to click somewhere (anywhere) outside the text input widget's box in order for the new value to be read.-->
             Click the calculator to update<br>the table's calculations.<br>
             <button type="button" id="updateBtn">
                 <img src="images/12percentcalculator-5149748_640.png" alt="calculator">
@@ -66,6 +68,10 @@
             <!--The share table will display here.-->
         </table>
     </fieldset>
+
+    <div id="qrcode"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 
     <script src="script.js"></script>
 </body>
