@@ -2,6 +2,10 @@ console.log("JS is connected.")
 let totalAmountDue = 0;
 let totalAmountSpan = document.getElementById("totalAmountDue");
 totalAmountSpan.textContent = `${totalAmountDue.toFixed(2)}`;
+
+let shareTable = document.getElementById('shareTable');
+shareTable.style.display = 'none';
+
 //This helper function determine's the cost of a share of the meal.//
 function getCostOfShare(mealCost, numPatrons, tipPercentage) {
     let oneShare = (mealCost * (1 + tipPercentage/100)) / numPatrons;
@@ -12,13 +16,13 @@ let mealCost;
 let numPatrons = 1;
 let additionalTipPercentage;
 let myDefaultTableContent =
-    `<caption>Costs for Each Number of Shares</caption>
+    `<caption>Amounts to Pay Based on Number of Shares</caption>
     <tr>
         <th>
-            Someone responsible for this number of shares...
+            Someone paying for this<br>number of shares...
         </th>
         <th>
-            ...should put this amount toward the cost of the meal.
+            ...should put this amount<br>toward the cost of the meal.
         </th>
     </tr>`
 
@@ -48,7 +52,14 @@ document.addEventListener('change', function() {
     console.log(`The number of patrons is ${numPatrons}.`);
     console.log(`The additional tip percentage is ${tipPercentage}.`);
 
-    let shareTable = document.getElementById('shareTable');
+    /*let shareTable = document.getElementById('shareTable');
+    */
+    if (totalAmountDue == 0) {
+        shareTable.style.display = 'none';
+    }
+    else {
+        shareTable.style.display = 'table';
+    }
     shareTable.innerHTML = myDefaultTableContent;
     let shareCost = getCostOfShare(mealCost, numPatrons, tipPercentage);
     console.log(`The cost of one share is ${shareCost}.`)
