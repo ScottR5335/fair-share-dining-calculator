@@ -102,7 +102,12 @@ document.addEventListener('change', function() {
         let newRow = document.createElement("tr");
 
         let sharesCell = document.createElement("td");
-        sharesCell.textContent = 'x = ' + numShares;
+        if (numShares == 1) {
+            sharesCell.textContent = numShares + ' share';
+        }
+        else {
+            sharesCell.textContent = numShares + ' shares';
+        }
         newRow.appendChild(sharesCell);
 
         let preTipAmtDueCell = document.createElement("td");
