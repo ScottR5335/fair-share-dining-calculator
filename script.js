@@ -41,10 +41,10 @@ let myDefaultTableContent =
     `<caption>Amounts to Pay Based on Number of Shares</caption>
     <tr>
         <th rowspan=2>
-            In order to pay <br>for <i>x</i> shares<br>of the meal, ...
+            In order to pay <br>for <i>x</i> share(s)<br>of the meal, ...
         </th>
         <th colspan=3>
-            ... put these amounts toward the<br>total cost of the meal.
+            ... put these amounts toward<br>the cost of the meal.
         </th>
     </tr>
     <tr>

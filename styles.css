@@ -3,6 +3,7 @@
 h1 {
    text-shadow: 0.05em 0.05em 0.05em silver;
    text-align: center;
+   margin: 0;
 }
 
 h1, h2, legend, .formWidget, div, #qrcode {
@@ -76,6 +77,9 @@ footer {
 
 #titleText {
    text-align: center;
+   flex: 0 1 auto;
+   min-width: 0;
+   overflow-wrap: break-word;
 }
 
 .dollarSignContainer {
@@ -84,3 +88,10 @@ footer {
    justify-content: center;
    align-items: center;
 }
+
+/*
+#initialHeading > * {
+   border: solid 1px red;
+
+}
+   */
