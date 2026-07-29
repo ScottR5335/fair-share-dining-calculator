@@ -36,7 +36,7 @@ function getTotalCostPerShare(mealCost, numPatrons, tipPercentage) {
 
 let mealCost;
 let numPatrons = 1;
-let TipPercentage;
+let tipPercentage;
 let myDefaultTableContent =
     `<caption>Amounts to Pay Based on Number of Shares</caption>
     <tr>
